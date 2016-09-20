@@ -72,7 +72,7 @@ class Parsed {
 				} else
 					res = false;
 			}
-		}
+		}if(!stk.isEmpty()) res = false;
 
 		return res;
 	}
