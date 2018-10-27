@@ -2,7 +2,6 @@ package com.mgp.aoip.ISP.pracstring;
 
 import java.util.Scanner;
 import java.util.StringTokenizer;
-import java.util.regex.*;
 
 /**
  * Given a string,s , matching the regular expression [A-Za-z !,?._'@]+, split
