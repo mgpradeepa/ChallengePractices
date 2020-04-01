@@ -1,6 +1,5 @@
 package com.mgp.codility.af;
 
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 
 /**
  * Created by mgpradeepa on 20/10/18.

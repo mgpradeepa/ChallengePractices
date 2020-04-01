@@ -1,5 +1,7 @@
 package com.mgp.hackerrank.ProgrammingSKills;
 
+import jdk.nashorn.internal.ir.annotations.Ignore;
+import junit.framework.TestCase;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -7,6 +9,7 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
+@Ignore
 public class AppTest 
     extends TestCase
 {
