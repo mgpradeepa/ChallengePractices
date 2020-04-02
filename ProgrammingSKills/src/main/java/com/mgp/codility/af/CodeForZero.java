@@ -10,7 +10,7 @@ public class CodeForZero {
 
     public static void main(String[] args) {
 //        int A [] = {2,-2,3,0,4,-7};
-        int A[] = {0};
+        int A[] = {0,0};
         CodeForZero codeForZero = new CodeForZero();
 
         System.out.println(codeForZero.solution(A));
