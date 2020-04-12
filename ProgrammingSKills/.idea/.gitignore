@@ -1,0 +1,8 @@
+# Default ignored files
+/workspace.xml
+*.*idea
+compiler.xml
+vcs.xml
+modules.xml
+misc.xml
+
