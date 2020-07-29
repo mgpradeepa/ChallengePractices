@@ -6,7 +6,8 @@ public class Cherlock {
 
 
     public static void main(String[] args) {
-        String inpu = "abcdefghhgfedecba";
+//        String inpu = "abcdefghhgfedecbai";
+        String inpu = "aabbcceefghi";
         System.out.println(isValid(inpu));
     }
 
