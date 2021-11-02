@@ -6,3 +6,6 @@ vcs.xml
 modules.xml
 misc.xml
 
+*.iml
+
+
