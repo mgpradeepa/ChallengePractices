@@ -8,41 +8,37 @@ public class ContainsTipletSumToZero {
         //example 1
 //        int[] arr= {0, -1, 2, -3, 1};
         //example 2
-        int[] arr= {0, -1, 2, -3, 5};
-        System.out.println(findTripletSumToZero(arr,n) == true ? 1 : 0);
+        int[] arr = {0, -1, 2, -3, 5};
+        System.out.println(findTripletSumToZero(arr, n) ? 1 : 0);
     }
-    private static  boolean findTripletSumToZero(int a[] , int n)
-    {
-        //add code here.
-        boolean triplet = false;
 
+    private static boolean findTripletSumToZero(int[] a, int n) {
+        //add code here.
         // lets first sort it so that we can get traversing easier
         Arrays.sort(a);
 
-        for(int i = 0 ; i < n-2; i++) {
-            if(i > 0 && a[i] == a[i-1])  continue;
+        for (int i = 0; i < n - 2; i++) {
+            if (i > 0 && a[i] == a[i - 1]) continue;
 
             int num = a[i];
-            int left = i+1;
-            int right = n-1;
-            while(left < right) {
+            int left = i + 1;
+            int right = n - 1;
+            while (left < right) {
                 int sum = a[left] + a[right] + num;
-                if(sum == 0 ) {
-                    triplet = true;
-                    return triplet;
+                if (sum == 0) {
+                    return true;
 
 
-                } else if(sum > 0 ) {
+                } else if (sum > 0) {
                     right--;
-                }
-                else {
+                } else {
                     left++;
 
                 }
             }
         }
 
-        return triplet;
+        return false;
 
 
     }
