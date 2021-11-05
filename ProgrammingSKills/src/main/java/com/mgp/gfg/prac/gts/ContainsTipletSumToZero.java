@@ -5,7 +5,10 @@ import java.util.Arrays;
 public class ContainsTipletSumToZero {
     public static void main(String[] args) {
         int n = 5;
-        int[] arr= {0, -1, 2, -3, 1};
+        //example 1
+//        int[] arr= {0, -1, 2, -3, 1};
+        //example 2
+        int[] arr= {0, -1, 2, -3, 5};
         System.out.println(findTripletSumToZero(arr,n) == true ? 1 : 0);
     }
     private static  boolean findTripletSumToZero(int a[] , int n)
@@ -13,9 +16,7 @@ public class ContainsTipletSumToZero {
         //add code here.
         boolean triplet = false;
 
-
-        // so that we can start squeezing
-
+        // lets first sort it so that we can get traversing easier
         Arrays.sort(a);
 
         for(int i = 0 ; i < n-2; i++) {
