@@ -17,6 +17,11 @@ public class KthLargestElementFromArray {
             System.out.print(i + " ,");
         }
 
+        System.out.println("%%% second iter  %%% ");
+        for(Integer i : findKthSecond(A, A.length, K)) {
+            System.out.print(i + " ,");
+        }
+
     }
 
     private static int[] findKthLargestElements(int[] a, int k) {
@@ -29,6 +34,18 @@ public class KthLargestElementFromArray {
             k--;
         }
         return result;
+    }
+
+    // iteration 2
+    private static int[] findKthSecond(int[]a, int n, int k) {
+        int res[] = new int[k];
+
+        Arrays.sort(a);
+
+        for(int i = n-1, j = 0  ; i > 0 && j < k; i--, j++) {
+            res[j] = a[i];
+        }
+        return res;
     }
 
 

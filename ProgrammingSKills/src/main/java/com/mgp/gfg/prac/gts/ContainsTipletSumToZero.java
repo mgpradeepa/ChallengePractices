@@ -6,9 +6,9 @@ public class ContainsTipletSumToZero {
     public static void main(String[] args) {
         int n = 5;
         //example 1
-//        int[] arr= {0, -1, 2, -3, 1};
+        int[] arr= {0, -1, 2, -3, 1};
         //example 2
-        int[] arr = {0, -1, 2, -3, 5};
+//        int[] arr = {0, -1, 2, -3, 5};
         System.out.println(findTripletSumToZero(arr, n) ? 1 : 0);
     }
 
