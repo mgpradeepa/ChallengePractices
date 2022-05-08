@@ -14,9 +14,9 @@ public class CheckValidTime {
 
     }
 
-    private static String printValidTime(String inputTime) {
+    private static String printValidTime(String S) {
         String resultTime = "";
-        String[] hourMin = inputTime.split(":");
+        String[] hourMin = S.split(":");
         String hour = hourMin[0];
         String min = hourMin[1];
 
@@ -44,6 +44,9 @@ public class CheckValidTime {
         else if(h[0] == '1' && h[1] == '?'  ) {
             nh[1] = '9';
             nh[0] = h[0];
+        }else if(h[0] == '0' &&  h[1] == '?') {
+            nh[0] = h[0];
+            nh[1] = '9';
         }
 
         String nhs = String.valueOf(nh);
@@ -57,12 +60,15 @@ public class CheckValidTime {
         else if(m[1] == '?') {
             nm[1] = '9';
             nm[0] = m[0];
+        }else {
+            nm[0] = m[0];
+            nm[1] = m[1];
         }
 
         String nms = String.valueOf(nm);
         System.out.println("minute part " + nms);
 
-        resultTime = nhs + nms;
+        resultTime = nhs +":"+ nms;
         return resultTime;
 
     }
