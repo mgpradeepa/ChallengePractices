@@ -12,6 +12,10 @@ public class CommandPatternApp {
        dataFlowIntegrator.flowTheData(new DBDataMask(dataStore));
        dataFlowIntegrator.flowInititated();
 
+       S3Data s3Data = new S3Data();
+       dataFlowIntegrator.flowTheData(new S3DataFlow(s3Data));
+       dataFlowIntegrator.flowInititated();
+
         
 
     }
