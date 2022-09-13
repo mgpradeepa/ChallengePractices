@@ -38,7 +38,8 @@ public class BracesStack {
             }
 
         }
-        if(stack.size() > 0)  fR = "NO";
+        if(stack.size() > 0 ) fR = "NO";
+
 
         return fR;
 
