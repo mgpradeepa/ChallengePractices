@@ -10,7 +10,8 @@ public class ReverseALinkedList {
         n1.next.next = new Node(300);
 
 
-        Node result = reverseALinkedList(n1);
+//        Node result = reverseALinkedList(n1);
+        Node result = reversListRecursive(n1);
         while(result!= null) {
             System.out.println(result.data);
             result = result.next;
@@ -42,6 +43,17 @@ public class ReverseALinkedList {
 
         return prevNode;
 
+
+    }
+
+    private static Node reversListRecursive(Node head) {
+        if(head == null || head.next == null)
+            return head;
+        Node res = reversListRecursive(head.next);
+        head.next.next = head;
+        head.next = null;
+
+        return res;
 
     }
 }
