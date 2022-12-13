@@ -1,22 +1,22 @@
 package com.mgp.gfg.prac.gts;
 
-import java.util.ArrayList;
+import com.mgp.generals.ListNode;
 
 public class FindMiddleElementInaLinkedListV2 {
     public static void main(String[] args) {
 
-        Node node = new Node(3);
-        node.next =new Node(4);
-        node.next.next= new Node(5);
+        ListNode node = new ListNode(3);
+        node.next =new ListNode(4);
+        node.next.next= new ListNode(5);
         System.out.println(getMiddle(node));
         System.out.println("runner approach " + getMiddleRunner(node));
     }
 
-    private static int getMiddleRunner(Node head) {
+    private static int getMiddleRunner(ListNode head) {
         int result;
 
-        Node fast = head.next.next;
-        Node slow = head.next;
+        ListNode fast = head.next.next;
+        ListNode slow = head.next;
 
         while(fast != null && fast.next != null) {
             fast = fast.next.next;
@@ -26,7 +26,7 @@ result = slow.data;
         return result;
     }
 
-    static  int getMiddle(Node head)
+    static  int getMiddle(ListNode head)
     {
         // Your code here.
         // iterate over the linked list collect the count
@@ -36,7 +36,7 @@ result = slow.data;
 
         int result ;
         int ind = 0;
-        Node inter = head;
+        ListNode inter = head;
         while( inter != null) {
             ind++;
             inter = inter.next;

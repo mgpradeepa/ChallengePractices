@@ -1,23 +1,23 @@
 package com.mgp.gfg.prac;
 
-import com.mgp.gfg.prac.gts.Node;
+import com.mgp.generals.ListNode;
 
 public class SumofNumberinLinkedList {
     public static void main(String[] args) {
-        Node n1 = new Node(2);
-        Node n12 = new Node(4);
-        Node n13 = new Node(3);
+        ListNode n1 = new ListNode(2);
+        ListNode n12 = new ListNode(4);
+        ListNode n13 = new ListNode(3);
         n1.next = n12;
         n12.next = n13;
 
 
-        Node n2 = new Node(5);
-        Node n22 = new Node(6);
-        Node n23 = new Node(4);
+        ListNode n2 = new ListNode(5);
+        ListNode n22 = new ListNode(6);
+        ListNode n23 = new ListNode(4);
         n2.next = n22;
         n22.next = n23;
 
-       Node resul =  addTwoNumber (n1, n2);
+       ListNode resul =  addTwoNumber (n1, n2);
 
        while (resul != null ) {
            System.out.println(resul.data);
@@ -27,10 +27,10 @@ public class SumofNumberinLinkedList {
 
     }
 
-    private static Node addTwoNumber(Node n1, Node n2) {
-        Node head  = null;
+    private static ListNode addTwoNumber(ListNode n1, ListNode n2) {
+        ListNode head  = null;
 
-        Node temp = null;
+        ListNode temp = null;
 
         // Carry
 
@@ -53,7 +53,7 @@ public class SumofNumberinLinkedList {
             }
 
             // sum it up and get the mod 10 value to store
-            Node node = new Node(sum % 10);
+            ListNode node = new ListNode(sum % 10);
 
             carry = sum / 10;
 
@@ -67,7 +67,7 @@ public class SumofNumberinLinkedList {
             }
         }
         if (carry > 0 ) {
-            temp.next = new Node(carry);
+            temp.next = new ListNode(carry);
         }
 
         return head;
