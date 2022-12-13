@@ -1,16 +1,16 @@
 package com.mgp.aoip.ISP.pracstring.lc;
 
-import com.mgp.gfg.prac.gts.Node;
+import com.mgp.generals.ListNode;
 
 public class LinkedListCycle {
-    private static boolean hasCycle(Node head) {
+    private static boolean hasCycle(ListNode head) {
         //check of head == null
         if(head == null) {
             return false;
 
         }
-        Node walk = head;
-        Node run = head;
+        ListNode walk = head;
+        ListNode run = head;
 
         while(run.next != null && run.next.next != null ){
             walk = walk.next;
@@ -24,8 +24,8 @@ public class LinkedListCycle {
     }
 
     public static void main(String[] args) {
-        Node n1 = new Node(1);
-        Node n2 = new Node(2);
+        ListNode n1 = new ListNode(1);
+        ListNode n2 = new ListNode(2);
         n1.next =n2;
         n2.next = n1;
 

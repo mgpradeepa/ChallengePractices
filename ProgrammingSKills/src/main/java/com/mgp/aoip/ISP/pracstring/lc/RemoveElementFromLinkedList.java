@@ -1,9 +1,9 @@
 package com.mgp.aoip.ISP.pracstring.lc;
 
-import com.mgp.gfg.prac.gts.Node;
+import com.mgp.generals.ListNode;
 
 public class RemoveElementFromLinkedList {
-    private static Node removeElement(Node head, int val) {
+    private static ListNode removeElement(ListNode head, int val) {
         if(head == null ) return null;
 
         head.next = removeElement(head.next,val); // current will be evaluated with next
@@ -12,10 +12,10 @@ public class RemoveElementFromLinkedList {
     }
 
     public static void main(String[] args) {
-        Node head = new Node(1);
-        head.next = new Node(2);
-        head.next.next = new Node(3);
-        Node result = removeElement(head, 2);
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+        ListNode result = removeElement(head, 2);
         while(result != null) {
             System.out.println(result.data);
             result = result.next;

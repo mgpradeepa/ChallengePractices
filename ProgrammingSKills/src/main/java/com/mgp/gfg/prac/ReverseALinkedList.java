@@ -1,34 +1,34 @@
 package com.mgp.gfg.prac;
 
-import com.mgp.gfg.prac.gts.Node;
+import com.mgp.generals.ListNode;
 
 public class ReverseALinkedList {
     public static void main(String[] args) {
 
-        Node n1 = new Node (10);
-        n1.next =  new Node(100);
-        n1.next.next = new Node(300);
+        ListNode n1 = new ListNode(10);
+        n1.next =  new ListNode(100);
+        n1.next.next = new ListNode(300);
 
 
 //        Node result = reverseALinkedList(n1);
-        Node result = reversListRecursive(n1);
+        ListNode result = reversListRecursive(n1);
         while(result!= null) {
             System.out.println(result.data);
             result = result.next;
         }
     }
 
-    private static Node reverseALinkedList(Node head) {
+    private static ListNode reverseALinkedList(ListNode head) {
         // check for head == null or head.next == null
         if(head == null || head.next == null) {
             return head;
         }
 
-        Node prevNode = head;
-        Node curNode = head.next;
+        ListNode prevNode = head;
+        ListNode curNode = head.next;
 
         while(curNode != null) {
-            Node nextNode = curNode.next;
+            ListNode nextNode = curNode.next;
             curNode.next = prevNode;
 
             // upddate
@@ -46,10 +46,10 @@ public class ReverseALinkedList {
 
     }
 
-    private static Node reversListRecursive(Node head) {
+    private static ListNode reversListRecursive(ListNode head) {
         if(head == null || head.next == null)
             return head;
-        Node res = reversListRecursive(head.next);
+        ListNode res = reversListRecursive(head.next);
         head.next.next = head;
         head.next = null;
 
