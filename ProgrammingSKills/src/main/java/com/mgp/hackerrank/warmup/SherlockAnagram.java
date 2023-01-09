@@ -1,6 +1,5 @@
 package com.mgp.hackerrank.warmup;
 
-import java.awt.peer.SystemTrayPeer;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;

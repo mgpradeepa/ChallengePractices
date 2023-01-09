@@ -10,7 +10,7 @@ public class MyCalulatorException {
 			throwException(EXCEPTION);
 //		System.out.println((int) Math.pow(n, p));
 
-		Double val = new Double(Math.pow(n, p));
+		Double val = Math.pow(n, p);
 
 		// return Integer.valueOf(val.intValue());
 		return (int) Math.pow(n, p);
