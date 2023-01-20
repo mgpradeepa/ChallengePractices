@@ -36,8 +36,8 @@ public class XOrderTreeTraversals {
     private static List<Integer> postOrderTraversalRecursive(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         if(root == null ) return result;
-        result.addAll(preOrderTraversalRecursive(root.getLeft()));
-        result.addAll(preOrderTraversalRecursive(root.getRight()));
+        result.addAll(postOrderTraversalRecursive(root.getLeft()));
+        result.addAll(postOrderTraversalRecursive(root.getRight()));
         result.add(root.getVal());
         return result;
 
@@ -46,9 +46,9 @@ public class XOrderTreeTraversals {
     private static List<Integer> inOrderTraversalRecursive(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         if(root == null ) return result;
-        result.addAll(preOrderTraversalRecursive(root.getLeft()));
+        result.addAll(inOrderTraversalRecursive(root.getLeft()));
         result.add(root.getVal());
-        result.addAll(preOrderTraversalRecursive(root.getRight()));
+        result.addAll(inOrderTraversalRecursive(root.getRight()));
         return result;
 
     }
