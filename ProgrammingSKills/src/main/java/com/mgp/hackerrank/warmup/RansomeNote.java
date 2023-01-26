@@ -1,5 +1,4 @@
 package com.mgp.hackerrank.warmup;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 
 import java.io.*;
 import java.math.*;
