@@ -1,10 +1,10 @@
 package com.mgp.hackerrank.ProgrammingSKills;
 
-import jdk.nashorn.internal.ir.annotations.Ignore;
 import junit.framework.TestCase;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import org.junit.Ignore;
 
 /**
  * Unit test for simple App.

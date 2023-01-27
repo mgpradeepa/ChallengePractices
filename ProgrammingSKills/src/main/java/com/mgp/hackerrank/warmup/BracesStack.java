@@ -1,12 +1,7 @@
 package com.mgp.hackerrank.warmup;
 
 import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.regex.*;
 
 
 public class BracesStack {
@@ -38,6 +33,8 @@ public class BracesStack {
             }
 
         }
+        if(stack.size() > 0 ) fR = "NO";
+
 
         return fR;
 
@@ -56,7 +53,9 @@ public class BracesStack {
 
             String result = isBalanced(s);
             System.out.println(result);
-        }
+        }//(((((())))))
+        // DSL  example
+        // cast(CEIL(sr_predict(STRUCT(X:=serverTime ,Y := CAST(get_json_field(value,'$[1]') as Double)))) as BIGINT)
 
 
         scanner.close();
