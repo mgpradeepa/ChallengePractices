@@ -9,11 +9,17 @@ record FootBaller(String a ) {}
        j17.validateFootBaller();
 
 
+
     }
 
     private  void validateFootBaller() {
 
+        Object howla = "abc";
         System.out.println(f.a);
+        if(f != null && howla != null) {
+            final var uperFottballer = f.a.toUpperCase();
+            System.out.println(uperFottballer + "()()()");
+        }
 
     }
 }
