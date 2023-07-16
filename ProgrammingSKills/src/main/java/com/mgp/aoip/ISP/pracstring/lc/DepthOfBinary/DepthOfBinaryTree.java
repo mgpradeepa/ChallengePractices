@@ -1,4 +1,4 @@
-package com.mgp.aoip.ISP.pracstring.lc;
+package com.mgp.aoip.ISP.pracstring.lc.DepthOfBinary;
 
 import com.mgp.generals.TreeNode;
 
