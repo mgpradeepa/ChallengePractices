@@ -5,29 +5,29 @@ public class MergeSortedLinkedList {
     public static void main(String[] args) {
         int[] arr1 = new int[] {1, 3, 5, 6};
         int[] arr2 = new int[] {2, 4, 6, 20, 34};
-        Node l = new Node();
-        Node list_head1  = l.createLinkedList(arr1);
+        Nodes  l = new Nodes();
+        Nodes list_head1  = l.createLinkedList(arr1);
         System.out.print("Original1: ");
         l.display(list_head1);
 
-        Node list_head2  = l.createLinkedList(arr2);
+        Nodes list_head2  = l.createLinkedList(arr2);
         System.out.print("Original2: ");
         l.display(list_head2);
 
         System.out.println("Merged");
-        Node resuktMerged = mergesortLinkedList(list_head1,list_head2);
+        Nodes resuktMerged = mergesortLinkedList(list_head1,list_head2);
         l.display(resuktMerged);
 
 
     }
 
-    private static Node mergesortLinkedList(Node head1, Node head2)
+    private static Nodes mergesortLinkedList(Nodes head1, Nodes head2)
     {
         if(head1 == null) return head2;
         else if( head2 == null) return head1;
 
 
-        Node mergerHead = null;
+        Nodes mergerHead = null;
         if(head1.data <= head2.data)  {
             mergerHead = head1;
             head1 = head1.next;
@@ -38,10 +38,10 @@ public class MergeSortedLinkedList {
             head2 = head2.next;
         }
         // create a tail for mergerHead
-        Node mergerTail = mergerHead;
+        Nodes mergerTail = mergerHead;
 
         while(head1 != null && head2 != null) {
-            Node temp = null;
+            Nodes temp = null;
             if(head1.data <= head2.data) {
                 temp = head1;
                 head1 = head1.next;
@@ -63,17 +63,17 @@ public class MergeSortedLinkedList {
     }
 }
 
-class Node {
+class Nodes {
 
     int data;
-    Node next;
+    Nodes next;
 //    Node(int d) {
 //        data = d;
 //        next = null;
 //    }
 
-    public Node createLinkedList(int[] a) {
-        Node root = null;
+    public Nodes createLinkedList(int[] a) {
+        Nodes root = null;
         for(Integer n : a) {
             root = insert(root, n);
 
@@ -81,9 +81,9 @@ class Node {
         return root;
     }
 
-    private Node insert(Node root, Integer n) {
-        Node temp = new Node();
-        Node pt;
+    private Nodes insert(Nodes root, Integer n) {
+        Nodes temp = new Nodes();
+        Nodes pt;
         temp.data  = n;
         temp.next = null;
 
@@ -101,7 +101,7 @@ class Node {
         return root;
     }
 
-    protected void display (Node list ) {
+    protected void display (Nodes list ) {
         while(list != null ) {
             System.out.println(list.data + " -> ");
             list = list.next;
