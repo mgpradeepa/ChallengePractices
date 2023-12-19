@@ -3,9 +3,10 @@ package com.mgp.gfg.prac;
 public class RightRotateArray {
     public static void main(String[] args) {
 //        int[] A  = {1, 2,3, 4, 5, 6};
-        int A[] = {3, 8, 9, 7, 6};
+//        int A[] = {3, 8, 9, 7, 6};
+        int A[] = {1, 1, 2, 3, 5};
         int n = A.length;
-        int d = 3;
+        int d = 42;
         int B[] = rightRotate(A, n , d);
         for(int x :B ) {
             System.out.print( x + ",");

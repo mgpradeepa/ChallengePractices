@@ -7,10 +7,7 @@ public class Anagram {
 
 	static boolean isAnagram(String a, String b) {
 
-		boolean retVal = Boolean.FALSE;
-		if (sortString(a).equalsIgnoreCase(sortString(b)))
-			retVal = Boolean.TRUE;
-		return retVal;
+		return sortString(a).equalsIgnoreCase(sortString(b));
 
 	}
 
@@ -23,9 +20,8 @@ public class Anagram {
 		}
 		Arrays.sort(newc);
 		// System.out.println("as chrs"+String.valueOf(newc));
-		String sortS = new String(newc);
-		// System.out.println("sortstrng"+sortS);
-		return sortS;
+        // System.out.println("sortstrng"+sortS);
+		return new String(newc);
 	}
 
 	public static void main(String... args) {
@@ -35,4 +31,5 @@ public class Anagram {
 		boolean ret = isAnagram(a, b);
 		System.out.println((ret) ? "Anagrams" : "Not Anagrams");
 	}
+
 }
