@@ -1,4 +1,4 @@
-package com.mgp.gdg.prac;
+package com.mgp.gfg.prac;
 import java.util.*;
 import java.lang.*;
 import java.io.*;
